@@ -1,0 +1,28 @@
+<h1>Lista Expansível</h1>
+<ul class="tree"> 
+    <li>
+        
+        Programaçao
+        <span wm-folder> Front</span>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java</li>
+            </ul>
+            <span wm-folder>Back </span>
+            <ol>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C++</li>
+            </ol>
+    </li>   
+</ul>
+<script>
+    document.querySelectorAll('wm-folder').forEach(folder =>{
+        floder.onclick= function(e){
+           const ul= folder.nextElementSibling
+           const d= ul.style.display
+           ul.style.display=d === 'none' ? 'block' : 'none'
+        }
+    })
+</script>
