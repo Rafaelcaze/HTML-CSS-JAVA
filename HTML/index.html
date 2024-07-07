@@ -10,19 +10,21 @@
        <h1> Exercicios (HTML)</h1>
     </header>
     <nav>
-        <a href wm-nav="exercicios/teste.html">00-Teste /</a>
-        <a href wm-nav="exercicios/temp.html">Temp</a>
-        <a href="exercicios/listas_alinhadas.html">01-Listas Alinhadas</a>
+        <a href rafael-nav="exercicios/teste.html">00-Teste /</a>
+        <a href rafael-nav="exercicios/temp.html">Temp</a>
+        <a href rafael-nav="exercicios/listas_alinhadas.html">01-Listas Alinhadas</a>
+        <a href rafael-nav="exercicios/links.html">02-Links</a>
+        <a href rafael-nav="exercicios/tabelas.html">03-Tabelas</a>
     </nav>
     <section id="conteudo"></section>
     <script>
-        document.querySelectorAll('[wm-nav]').forEach(link =>{
+        document.querySelectorAll('[rafael-nav]').forEach(link =>{
           const conteudo =document.getElementById('conteudo') 
           
           link.onclick =function(e){
               e.preventDefault()
               
-              fetch(link.getAttribute('wm-nav'))
+              fetch(link.getAttribute('rafael-nav'))
                 .then(resp =>resp.text())
                 .then(html =>conteudo.innerHTML = html)
             } 
