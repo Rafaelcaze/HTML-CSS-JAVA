@@ -1,10 +1,11 @@
 <h1>Lista Expansível</h1>
+<h2>Programaçao</h2>
 <ul class="tree"> 
     <li>
       Programaçao
         <ul>
             <li>
-                <span listas-folder="">Front</span>
+                <span wm-folder>Front</span>
                 <ul style="display: none;">
                     <li>HTML</li>
                     <li>CSS</li>
@@ -12,22 +13,23 @@
                 </ul>
             </li>
             <li>
-                <span listas-folder="">Back</span>
-                <ol style="display: none;">
+                <span wm-folder>Back</span>
+                <ul style="display: none;">
                     <li>Python</li>
                     <li>Java</li>
                     <li>C++</li>
-                </ol>
+                </ul>
             </li>
         </ul>    
     </li>   
 </ul>
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
 <script>
-    document.querySelectorAll('[listas-folder]').forEach(folder => {
-        folder.onclick = function(e){
+    document.querySelectorAll('[wm-folder]').forEach(folder => {
+        folder.onclick = function(e) {
            const ul = folder.nextElementSibling;
            const d = ul.style.display;
            ul.style.display = d === 'none' ? 'block' : 'none'
         }
-    });
+    })
 </script>
